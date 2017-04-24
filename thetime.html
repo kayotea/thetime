@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script use strict; type="text/javascript">
+        var HOUR = 8;
+        var MINUTE = 50;
+        var PERIOD = "AM";
+
+        function theTime(HOUR, MINUTE, PERIOD){
+            var statement = "It's ";
+
+            if(MINUTE >= 30){
+                var time = HOUR + 1;
+                statement += "almost " + time + " ";
+            }
+            else if(MINUTE < 30){
+                statement += "just after " + HOUR + " ";
+            }
+
+            if(PERIOD == "AM"){
+                statement += "in the morning."
+            }
+            if(PERIOD == "PM"){
+                statement += "in the evening."
+            }
+            console.log(statement);
+        }
+
+        theTime(HOUR, MINUTE, PERIOD);
+    </script>
+</head>
+</html>
